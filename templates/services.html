@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block title %} 
+Services
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid my-2">
+    <img src="static/img/service.avif" style="height: 400px; width: 1235px;"/>
+</div>
+<div class="container py-2">
+    <h1 class="text-center">Services</h1>
+    <form method="post" action="/services" style="margin-left: 200px;">
+        {% csrf_token %}
+        <div class="form-group col-md-10 px-0" style="margin-top: 20px;">
+            <label for="text">Employee Address</label>
+            <input type="text" class="form-control" id="text" name="address">
+        </div>
+        <div class="form-group col-md-10 px-0">
+            <label for="number">Employee Salary</label>
+            <input type="number" class="form-control" id="number" name="salary">
+        </div>
+        <div class="form-group col-md-10 px-0">
+            <label for="text">Employee City</label>
+            <select class="form-control" id="text" name="city">
+                <option selected>Choose</option>
+                <option>Agra</option>
+                <option>Ahemadabad</option>
+                <option>Ajmer</option>
+                <option>Aligarh</option>
+                <option>Allahabad</option>
+                <option>Alwar</option>
+                <option>Ambala</option>
+                <option>Amravati</option>
+                <option>Amritsar</option>
+                <option>Anantapur</option>
+                <option>Anand</option>
+                <option>Asansol</option>
+                <option>Aurangabad</option>
+                <option>Bagalkot</option>
+                <option>Ballari</option>
+                <option>Bangalore</option>
+                <option>Baramati</option>
+                <option>Baraut</option>
+                <option>Bareilly</option>
+                <option>Baroda</option>
+                <option>Beawer</option>
+                <option>Belgaum</option>
+                <option>Bhagalpur</option>
+                <option>Bhavnagar</option>
+                <option>Bhilai</option>
+                <option>Bhilwara</option>
+                <option>Bhiwandi</option>
+                <option>Bhopal</option>
+                <option>Bhubaneswar</option>
+                <option>Bhuj</option>
+                <option>Bikaner</option>
+                <option>Bilaspur</option>
+                <option>Bokaro</option>
+                <option>Bundi</option>
+                <option>Chandausi</option>
+                <option>Chandigarh</option>
+                <option>Chandrapur</option>
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Cuttack</option>
+                <option>Dehradun</option>
+                <option>Delhi</option>
+                <option>Dhanbad</option>
+                <option>Durgapur</option>
+                <option>Faridabad</option>
+                <option>Gandhinagar</option>
+                <option>Ghaziabad</option>
+                <option>Guntur</option>
+                <option>Guwahati</option>
+                <option>Hubli</option>
+                <option>Hyderabad</option>
+                <option>Imphal</option>
+                <option>Indore</option>
+                <option>Jabalpur</option>
+                <option>Jaipur</option>
+                <option>Jamshedpur</option>
+                <option>Jhansi</option>
+                <option>Kanpur</option>
+                <option>Kakinada</option>
+                <option>Kochi</option>
+                <option>Kolkata</option>
+                <option>Kollam</option>
+                <option>Kota</option>
+                <option>Kozhikode</option>
+                <option>Lucknow</option>
+                <option>Ludhiana</option>
+                <option>Madurai</option>
+                <option>Mangalore</option>
+                <option>Meerut</option>
+                <option>Mira-Bhayandar</option>
+                <option>Mumbai</option>
+                <option>Mysore</option>
+                <option>Nagpur</option>
+                <option>Nashik</option>
+                <option>Patna</option>
+                <option>Pune</option>
+                <option>Rajkot</option>
+                <option>Surat</option>
+                <option>Thane</option>
+                <option>Vadodara</option>
+                <option>Visakhapatnam</option>
+            </select>
+        </div>    
+        <div class="form-group col-md-10 px-0">
+            <label for="text">Employee State</label>
+            <select id="inputState" class="form-control" name="state">
+                <option selected>Choose</option>
+                <option>Andhra Pradesh</option>
+                <option>Assam</option>
+                <option>Arunachal Pradesh</option>
+                <option>Bihar</option>
+                <option>Chhattisgarh</option>
+                <option>Goa</option>
+                <option>Gujarat</option>
+                <option>Haryana</option>
+                <option>Himachal Pradesh</option>
+                <option>Jammu and Kashmir</option>
+                <option>Jharkhand</option>
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Madhya Pradesh</option>
+                <option>Maharashtra</option>
+                <option>Manipur</option>
+                <option>Meghalaya</option>
+                <option>Mizoram</option>
+                <option>Nagaland</option>
+                <option>Odisha</option>
+                <option>Punjab</option>
+                <option>Rajasthan</option>
+                <option>Sikkim</option>
+                <option>Tamil Nadu</option>
+                <option>Telangana</option>
+                <option>Tripura</option>
+                <option>Uttar Pradesh</option>
+                <option>Uttarakhand</option>
+                <option>West Bengal</option>
+            </select>
+        </div>
+        <div class="form-group col-md-10 px-0">
+            <label for="text">Employee Union Territories</label>
+            <select class="form-control" id="text" name="union_territories">
+                <option selected>Choose</option>
+                <option>Andaman and Nicobar Islands</option>
+                <option>Chandigarh</option>
+                <option>Dadra and Nagar Haveli and Daman</option>
+                <option>Delhi</option>
+                <option>Jammu and Kashmir</option>
+                <option>Ladakh</option>
+                <option>Lakshadweep</option>
+                <option>Puducherry</option>
+            </select>
+        </div>    
+        <div class="form-group col-md-10 px-0">
+            <label for="number">Pincode</label>
+            <input type="number" class="form-control" id="number" name="pincode">
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-left: 320px;">Submit</button>
+    </form>
+</div>
+{% endblock body %}
